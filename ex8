@@ -1,0 +1,20 @@
+% Triangular membership function
+x = (0.0:1.0:10.0)';
+y1 = trimf(x, [1 3 5]);
+subplot(3,1,1)
+plot(x, y1);
+title('Triangular MF');
+
+% Trapezoidal membership function
+x = (0.0:1.0:10.0)';
+y2 = trapmf(x, [1 3 5 7]);
+subplot(3,1,2)
+plot(x, y2);
+title('Trapezoidal MF');
+
+% Bell-shaped membership function
+x = (0.0:0.2:10.0)';  % column vector for consistency
+y3 = gbellmf(x, [3 5 7]);  % a=3, b=5, c=7
+subplot(3,1,3)
+plot(x, y3);
+title('Generalized Bell-shaped MF');
